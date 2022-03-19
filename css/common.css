@@ -1,0 +1,171 @@
+@charset "UTF-8";
+body {
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  word-break: break-all;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #1ca9e3;
+}
+
+li {
+  list-style: none;
+}
+.nav_all {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 3px 3px 0 rgb(0 0 0 / 20%);
+}
+/*position: fixed;を使用して、スクロールしてもheaderが固定表示される
+box-shadowでボックス上下に影を追加して、スクロールした際にもheaderの境界線が明確になる*/
+.nav_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav_item {
+  font-size: 18px;
+  padding: 0 24px;
+}
+/*padding: 0 24px;で横並びにした要素の左右にpaddingを追加*/
+.nav_link {
+  display: inline-block;
+  padding: 20px 0;
+  color: #333;
+}
+
+.nav_link:hover {
+  color: #75A9FF;
+}
+/*display: inline-block;を使用して、指定した要素を内部に表示するように指定
+nav_link:hoverでカーソルを合わせた際に色が変化する*/
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 700px;
+  background-color: #75A9FF;
+}
+/*要素をdisplay: flex;に指定
+align-items: center;,justify-content: center;で中央寄せ
+height: 700px;を指定し、背景色を#75A9FF*/
+.top_title {
+  font-size: 60px;
+  font-weight: bold;  color: #fff;
+  letter-spacing: 5px;
+}
+.top_subtitle {
+  font-size: 20px;
+  font-weight: bold;  color: #fff;
+  letter-spacing: 5px;
+}
+/*etter-spacing: 5px;で文字同士の間隔を追加*/
+.section {
+  padding: 120px 0;
+}
+.section:nth-of-type(odd) {
+  background-color: #f7f7f7;
+}
+.font1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+.font2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.font3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.font4 {
+  width: 60%;
+  margin: 0 auto;
+}
+.about_img {
+  display: block;
+  width: 40%;
+  margin: 0 auto 30px;
+}
+.skill_item {
+  display: flex;
+  margin-bottom: 50px;
+}
+/*skill_item内の要素をdisplay: flex;で横並びにし、下部にmarginを追加*/
+.skill_img {
+  margin-right: 20px;
+}
+
+.skill_img img {
+  width: 60px;
+}
+/*skill_imgの右側にmarginを追加し、imgの大きさをwidthで指定*/
+.work_all {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*全ての作品を囲っているwork_allをdisplay: flex;で横並びに指定しています。そして、flex-wrap: wrap;を使用して複数行に折り返す
+ flex-wrapプロパティは、フレックスアイテムを1行に抑えるか、複数行に折り返すかを指定することができる*/
+ .work_item {
+  flex: 32%;
+  margin-right: 2%;
+}
+
+.work_item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.work_item a img {
+  width: 100%;
+}
+/*work_itemでフレックスアイテムの表示領域を指定
+この場合は100%を三等分＋余白を考慮した際に約32%で指定するのがベストと判断
+フレックスアイテムの右側にmarginを指定しましたが、:nth-of-type(3n)で3,6番目のアイテムの時にmarginを0にするようにしている*/
+.work_body p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 6px;
+}
+.contact_list {
+  display: flex;  align-items: center;
+  justify-content: center;
+}
+
+.contact_list li {
+  list-style: none;
+}
+.contact_img {
+  width: 60px;
+}
+.contact_maill {
+  margin-top: 10px;
+  text-align: center;
+}
+.bottom {
+  background-color: #333;
+}
+.bottom .inner {
+  padding: 30px;
+}
+.copyright {
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+}
